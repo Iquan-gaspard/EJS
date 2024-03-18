@@ -4,14 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <% for (let i = 1; i < 10; i++) { %>
-    <h1><%- i %></h1>
-    <% } %>
-    <p>h</p>
-    <% for (let i = 1; i < 10; i++) { %><%= myString %> <% } %>
-    <p>pp</p>
-    <%- include("partials/footer") %>
+    <!-- <form action="/example" method="get">
+      <label for="name">name:</label>
+      <input type="text" id="name" name="name" />
+      <label for="age">age:</label>
+      <input type="number" id="age" name="age" />
+      <button>submit</button> -->
+    </form>
+
+    <table>
+      <tr>
+        <th>name</th>
+        <th>score</th>
+      </tr>
+      <% languages.forEach(lang => {%>
+        <tr>
+          <td><%= lang.name %></td>
+          <td><%= lang.rating %></td>
+        </tr>
+        <% }) %>
+     
+    </table>
   </body>
 </html>
